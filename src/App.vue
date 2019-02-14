@@ -3,7 +3,7 @@
         <div @click="openModal" class="btn btn--flat">Open popup</div>
 
         <transition name="modal">
-            <app-modal v-if="modalIsOpen" @close_modal="close_modal"></app-modal>
+            <app-modal v-if="modalIsOpen" @closeModal="closeModal"></app-modal>
         </transition>
 
         <div class="json">{{ json }}</div>
@@ -35,7 +35,7 @@
             openModal() {
                 this.modalIsOpen = true;
             },
-            close_modal(ratings) {
+            closeModal(ratings) {
                 this.modalIsOpen = false;
                 this.ratings = ratings;
             }

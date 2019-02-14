@@ -30,7 +30,8 @@
         props: {
             max: {
                 default: 5,
-                type: Number
+                type: [Number, String],
+                validator: value => Number(value) > 1 && Number(value) < 13
             },
             clr_prime: {
                 type: String,

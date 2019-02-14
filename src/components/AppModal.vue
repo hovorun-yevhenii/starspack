@@ -1,7 +1,7 @@
 <template>
     <div class="modal">
         <div class="modal__body">
-            <div @click="close_modal()" class="modal__close-btn">
+            <div @click="closeModal()" class="modal__close-btn">
                 <svg viewBox="0 0 174.2 174.2">
                     <path fill="#fff" d="M146.537,1.047c-1.396-1.396-3.681-1.396-5.077,0L89.658,52.849
                         c-1.396,1.396-3.681,1.396-5.077,0L32.78,1.047 c-1.396-1.396-3.681-1.396-5.077,0
@@ -26,7 +26,7 @@
                       @change="setRating">
             </app-rate>
 
-            <div @click="close_modal('submit')" class="btn">Submit feedback</div>
+            <div @click="closeModal('submit')" class="btn">Submit feedback</div>
         </div>
     </div>
 </template>
@@ -62,8 +62,8 @@
             setRating(rating) {
                 this.ratings[`${rating.refer}_rating`] = rating;
             },
-            close_modal(submit) {
-                this.$emit("close_modal", submit ? this.ratings : {});
+            closeModal(submit) {
+                this.$emit("closeModal", submit ? this.ratings : {});
             }
         }
     }

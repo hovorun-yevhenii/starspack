@@ -17,7 +17,7 @@
         props: {
             rating: Number,
             value: Number,
-            stars_count: Number,
+            stars_count: [Number, String],
             clr_prime: String,
             clr_second: String
         },
